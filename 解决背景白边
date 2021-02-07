@@ -1,0 +1,19 @@
+     /**
+ * 类型：ClientSide
+ * 对象：spreadsheetReport
+ * 事件：onRender
+ */
+function main(spreadsheetReport, flag) {if(flag) {return;}
+    
+    var background = spreadsheetReport.elemSheetFrame.contentWindow.document.body;
+    var parentMainDiv=spreadsheetReport.elemSheetFrame.contentWindow.document.getElementById("parentMainDiv");
+    if(parentMainDiv){
+        parentMainDiv.style.backgroundRepeat="no-repeat";
+        parentMainDiv.style.backgroundSize="100% 100%";
+        parentMainDiv.style.backgroundAttachment="fixed";
+    }
+    
+    background.style.backgroundRepeat = "no-repeat";
+    background.style.backgroundSize="100% 100%";
+    background.style.backgroundAttachment="fixed";
+}
